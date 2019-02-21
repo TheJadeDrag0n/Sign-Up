@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	% include('shared/header.html')
+	% include('shared/navbar.html')
+
+	<body class = "green accent-1">
+  
+  
+		<div>
+	
+				% for ticket in ticket_list:
+				<div class="col s6 row center teal lighten-2 container">
+					<h2 class="header white-text ">{{ticket.name}}</h2>
+					<div class="card horizontal">
+						<div class="card-image z-depth-1">
+							<img src="https://i.redd.it/pgcnuz64b3dy.png" width="240" height="160">
+						</div>
+					<div class="card-stacked">
+						<div class="card-content teal white-text">
+						<h5>Email: {{ticket.email}}</h5>
+						<h5>D.O.B: {{ticket.dob}}</h5>
+						</div>
+					
+					</div>
+					</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				%end
+		</div>
+		
+	% include('shared/footer.html')
+</html>

@@ -1,6 +1,8 @@
 #---------------------------------------------------
 #| Ver 1.1 - added test ticket data                |
 #| Ver 1.2 - adding server functionality to pyhton |
+#|                                                 |
+#| Ver 1.5 - add second page.                      |
 #---------------------------------------------------
 
 
@@ -45,6 +47,14 @@ tickets = [
 def index():
     
     pass
+
+#check in
+@route("/check-in")
+@view("check-in")
+def check_in():
+    data = dict (ticket_list=tickets)
+    return data
+
 
 
 
