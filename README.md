@@ -8,4 +8,6 @@ Ver 1.3 - added basic web page.
 
 Ver 1.4 - added fetures to the website, eg. header, grids, navbar etc.
 
-Ver 1.4.1 - added a footer
+Ver 1.4.1 - added footer 
+
+Ver 1.4.2 - added .gifs and jpegs to the website.
