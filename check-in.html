@@ -19,6 +19,13 @@
 						<div class="card-content teal white-text">
 						<h5>Email: {{ticket.email}}</h5>
 						<h5>D.O.B: {{ticket.dob}}</h5>
+						
+						%if ticket.check_in == True:
+							<p> 〈Checked in〉 </p>
+						%else:
+							<p><a href="/check-in-success/{{ticket.id}}"> 〈Not Checked In〉 </a></p>
+						%end
+						
 						</div>
 					
 					</div>
