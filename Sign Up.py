@@ -60,7 +60,7 @@ def check_in():
 #Changes ticket ststus to "checked-in"
 @route("/check-in-success/<ticket_id>")
 @view("check-in-success")
-def check_in_success():
+def check_in_success(ticket_id):
     
     ticket_id = int(ticket_id)
     found_ticket = None
