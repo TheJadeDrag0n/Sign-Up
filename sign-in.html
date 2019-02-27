@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	% include('shared/header.html')
+	% include('shared/navbar.html')
+
+	<body class = "green accent-1">
+
+		<div class="row container">
+    <form class="s12" action="/sign-in" method="post">
+      <div class="row">
+        <div class="input-field col s7">
+          <input id="inp_name" type="text" class="validate">
+          <label for="inp_name">Name</label>
+        </div>
+		
+      <div class="row">
+        <div class="input-field col s7">
+          <input id="inp_dob" name="dob" type="text" class="validate">
+          <label for="inp_dob">dd.mm.yyy</label>
+        </div>
+      </div>
+	  
+      <div class="row">
+        <div class="input-field col s7">
+          <input id="inp_email" name="email" type="email" class="validate">
+          <label for="inp_email">Email</label>
+        </div>
+      </div>
+			
+			
+			 <a class="waves-effect waves-light btn green" href="sign-in-success">Submit</a>
+			
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+		
+	</body>
+	
+	% include('shared/footer.html')
+</html>

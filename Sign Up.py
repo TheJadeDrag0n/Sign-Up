@@ -5,6 +5,7 @@
 #| Ver 1.5 - add second page.                      |
 #|                                                 |
 #| Ver 1.7 - added the check-in-sucess page        |
+#| Ver 1.8 - added sell-ticket page                |
 #---------------------------------------------------
 
 
@@ -70,6 +71,16 @@ def check_in_success(ticket_id):
     data = dict (ticket = found_ticket)
     found_ticket.check_in = True
     return data
+
+#
+@route("/sign-in")
+@view("sign-in")
+def sign_in():
+    
+    pass
+
+
+
 
 
 run(host='0.0.0.0',port = 8080, reloader=True, debug=True)
