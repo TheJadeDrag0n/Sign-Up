@@ -6,17 +6,17 @@
 	<body class = "green accent-1">
 
 		<div class="row container">
-    <form class="s12" action="/sign-in" method="post">
+    <form class="s12" action="/sign-in-success" method='post'>
       <div class="row">
         <div class="input-field col s7">
-          <input id="inp_name" type="text" class="validate">
+          <input id="inp_name" name="name" type="text" class="validate">
           <label for="inp_name">Name</label>
         </div>
 		
       <div class="row">
         <div class="input-field col s7">
           <input id="inp_dob" name="dob" type="text" class="validate">
-          <label for="inp_dob">dd.mm.yyyY</label>
+          <label for="inp_dob">DD/MM/YYYY</label>
         </div>
       </div>
 	  
@@ -28,7 +28,7 @@
       </div>
 			
 			
-			 <a class="waves-effect waves-light btn green" href="/sign-in-success">Submit</a>
+			 <button class="waves-effect waves-light btn green" type="submit" name="action" >Submit</button>
 			
           </div>
         </div>

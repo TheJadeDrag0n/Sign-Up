@@ -81,12 +81,16 @@ def sign_in():
 
 
 
-@route("/sign-in-success")
+@route("/sign-in-success", method='POST')
 @view("sign-in-success")
-def sign_in():
+def sign_in_success():
+    name = request.forms.get('name')
+    email = request.forms.get('email')
+    date_of_birth = request.forms.get('dob')
     
-    pass
-
+    new_ticket = Ticket(name, email, date_of_birth, False)
+    tickets.append(new_ticket)
+    
 
 
 
