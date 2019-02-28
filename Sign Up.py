@@ -3,6 +3,9 @@
 #| Ver 1.2 - adding server functionality to pyhton |
 #|                                                 |
 #| Ver 1.5 - add second page.                      |
+#|                                                 |
+#| Ver 1.7 - added the check-in-sucess page        |
+#| Ver 1.8 - added sell-ticket page                |
 #---------------------------------------------------
 
 
@@ -29,7 +32,7 @@ class Ticket:
 
 #test data
 tickets = [
-    Ticket("James Cameron", "jamescameron@my.rnls.school.nz", "21/09/01", False),
+    Ticket("James Cameron", "jamescameron@my.rnls.school.nz", "21/09/01", True),
     Ticket("Dan", "dan123@outlook.com", "13/06/87", False),
     Ticket("Hannah Wilson", "hannah123@gmail.com", "n/a", False),
     Ticket("Cynthia", "randomperson@gmail.com", "n/a", False)
@@ -54,6 +57,52 @@ def index():
 def check_in():
     data = dict (ticket_list=tickets)
     return data
+
+#Changes ticket ststus to "checked-in"
+@route("/check-in-success/<ticket_id>")
+@view("check-in-success")
+def check_in_success(ticket_id):
+    
+    ticket_id = int(ticket_id)
+    found_ticket = None
+    for ticket in tickets:
+        if ticket.id == ticket_id:
+            found_ticket = ticket
+    data = dict (ticket = found_ticket)
+    found_ticket.check_in = True
+    return data
+
+#
+@route("/sign-in")
+@view("sign-in")
+def sign_in():
+    
+    pass
+
+
+
+@route("/sign-in-success", method='POST')
+@view("sign-in-success")
+def sign_in_success():
+    name = request.forms.get('name')
+    email = request.forms.get('email')
+    date_of_birth = request.forms.get('dob')
+    
+    new_ticket = Ticket(name, email, date_of_birth, False)
+    tickets.append(new_ticket)
+    
+
+
+
+
+
+
+@route("/one_two_seven_three")
+@view("one_two_seven_three")
+def one_two_seven_three():
+    
+    pass
+
 
 
 
