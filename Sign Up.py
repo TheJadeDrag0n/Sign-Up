@@ -89,4 +89,19 @@ def sign_in():
 
 
 
+
+
+
+
+@route("/one_two_seven_three")
+@view("one_two_seven_three")
+def one_two_seven_three():
+    
+    pass
+
+
+
+
+
+
 run(host='0.0.0.0',port = 8080, reloader=True, debug=True)
